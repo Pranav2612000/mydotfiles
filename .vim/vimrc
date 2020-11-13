@@ -1,0 +1,67 @@
+"""" Basic Behaviour
+set number " display line numbers
+set cursorline "highlight currentline
+set wrap   " wrap lines
+set encoding=utf-8 " set encoding to utf-8
+set mouse=a " enable mouse support
+set wildmenu " visual autocomplete for command menu
+set showmatch " highlight matching parenthesis
+set visualbell " blink cursor on error, instead of beeping
+
+"""" Key Bindings
+
+" move vertically by visual line( wrapped lines not skipped)
+nmap j gj
+nmap k gk
+
+imap <Tab> <C-N>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
+
+nmap <C-P> :FZF<CR>
+
+"""" Appearance
+
+"choose colorscheme
+colorscheme murphy " options - slate, molokai, badwolf, solarized
+
+" use filetype-based syntax highlighting
+syntax enable
+filetype plugin indent on
+
+"""" Tab Settings
+
+set tabstop=4 " width of <TAB>
+set expandtab " convert tabs to spaces
+set shiftwidth=4 " no of spaces to use for auto-indent
+set softtabstop=4 "backspace after <TAB> will remove this no of spaces
+
+set autoindent " copy indent from current line when starting a new line
+set smartindent " better autoindent add indent after braces
+
+"""" Search Settings
+
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+
+"""" Plugins
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf' " fzf file search
+Plug 'junegunn/fzf.vim' " default vim configuration for fzf
+Plug 'neoclide/coc.nvim' " intellisense for vim
+Plug 'airblade/vim-gitgutter' " show uncommited changes
+Plug 'jremmen/vim-ripgrep' " search all files for text
+let g:rg_command = 'rg --vimgrep -S'
+
+call plug#end()
+
+" Use rg with ctrlp-plugin
+
+"if executable('rg')
+"    let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+"endif

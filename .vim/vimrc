@@ -54,6 +54,7 @@ Plug 'junegunn/fzf.vim' " default vim configuration for fzf
 Plug 'neoclide/coc.nvim' " intellisense for vim
 Plug 'airblade/vim-gitgutter' " show uncommited changes
 Plug 'jremmen/vim-ripgrep' " search all files for text
+Plug 'dense-analysis/ale'
 let g:rg_command = 'rg --vimgrep -S'
 
 call plug#end()

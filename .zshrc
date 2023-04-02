@@ -1,4 +1,6 @@
 bindkey -v
+# ZSH does not add reverse history search binding to vim mode by default
+bindkey "^R" history-incremental-search-backward
 
 # Alias
 alias ll='ls -l'

@@ -32,10 +32,10 @@ filetype plugin indent on
 
 """" Tab Settings
 
-set tabstop=4 " width of <TAB>
+set tabstop=2 " width of <TAB>
 set expandtab " convert tabs to spaces
-set shiftwidth=4 " no of spaces to use for auto-indent
-set softtabstop=4 "backspace after <TAB> will remove this no of spaces
+set shiftwidth=2 " no of spaces to use for auto-indent
+set softtabstop=2 "backspace after <TAB> will remove this no of spaces
 
 set autoindent " copy indent from current line when starting a new line
 set smartindent " better autoindent add indent after braces
@@ -55,6 +55,8 @@ Plug 'neoclide/coc.nvim' " intellisense for vim
 Plug 'airblade/vim-gitgutter' " show uncommited changes
 Plug 'jremmen/vim-ripgrep' " search all files for text
 Plug 'dense-analysis/ale'
+Plug 'christoomey/vim-tmux-navigator'
+
 let g:rg_command = 'rg --vimgrep -S'
 
 call plug#end()

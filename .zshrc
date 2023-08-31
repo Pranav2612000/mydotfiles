@@ -9,7 +9,7 @@ alias home='cd ~/Desktop/Pranav/'
 alias work='cd ~/Desktop/Pranav/projects'
 
 # Ignore hidden files and node_modules while using fzf
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git/**"'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

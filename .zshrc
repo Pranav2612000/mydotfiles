@@ -1,4 +1,11 @@
 bindkey -v
+
+# Open up current command in vim on pressing v
+export EDITOR="/usr/bin/vi"
+export VISUAL=vim
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 # ZSH does not add reverse history search binding to vim mode by default
 bindkey "^R" history-incremental-search-backward
 

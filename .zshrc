@@ -12,6 +12,7 @@ bindkey "^R" history-incremental-search-backward
 # Alias
 alias ll='ls -l'
 alias gis='git status'
+alias gfom='git fetch origin main:main'
 alias home='cd ~/Desktop/Pranav/'
 alias work='cd ~/Desktop/Pranav/projects'
 

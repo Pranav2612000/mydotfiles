@@ -115,8 +115,9 @@ set -o vi
 # used to search for files inside vim
 export FZF_DEFAULT_COMMAND='rg --files'
 
-#short form of git status
+#git shortforms
 alias gis='git status'
+alias gfom='git fetch origin main:main'
 
 #move directly to Pranav directory
 alias work='cd /home/pranav/Desktop/Pranav/'
